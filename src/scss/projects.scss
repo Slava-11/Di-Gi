@@ -1,0 +1,104 @@
+@import './var.scss';
+@import './mixins.scss';
+
+.projects{
+    background: {
+        image: linear-gradient(var(--GradientColor)) ;
+      }
+      padding: {
+        left: 20px;
+        right: 20px;
+        bottom: 40px;
+      }
+      @include for-mobile{
+        padding: {
+          left: 60px;
+          right: 60px;
+        }
+      }
+      @include for-tablet{
+        padding: {
+          left: 53px;
+          right: 53px;
+          bottom: 80px;
+        }
+      }
+      &__title{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--white);
+        padding-top: 24px;
+        @include for-mobile{
+            font-size: 48px;
+            padding-top: 36px;
+        }
+        @include for-tablet{
+            padding-top: 80px;
+        }
+      }
+      &__wand{
+        width: 50px;
+        height: 8px;
+        margin: {
+          top: 20px;
+          left: auto;
+          right: auto;
+          bottom: 40px;
+        }
+        background-color: var(--white);
+        @include for-mobile{
+            width: 100px;
+        }
+        @include for-tablet{
+            margin: {
+              top: 25px;
+              bottom: 80px;
+            }
+        }
+      }
+      &__content{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4,285px);
+        gap: 20px;
+        max-width: 265px;
+        margin: 0px auto;
+        @include for-mobile{
+            grid-template-rows: repeat(4,500px);
+            max-width: 518px;
+        }
+        @include for-tablet{
+          max-width: 647px;
+            grid-template-columns: repeat(2,310px);
+            grid-template-rows: repeat(2,320px);
+            gap: 28px;
+        }
+        @include for-desktop{
+            max-width: 662px;
+        }
+        @include for-desktop-HD{
+            grid-template-columns: repeat(4,270px);
+            grid-template-rows: repeat(1,265px);
+            gap: 24px;
+            max-width: 1138px;
+        }
+      }
+      &__card{
+        max-width: 280px;
+        @include for-mobile{
+            max-width: 100%;
+        }
+        &-img{
+            width: 100%;
+        }
+        &-title{
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: var(--MainColor);
+            margin-top: 20px;
+        }
+      }
+}

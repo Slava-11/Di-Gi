@@ -1,0 +1,101 @@
+@import './var.scss';
+@import './mixins.scss';
+
+.news{
+    background-color: var(--khaki);
+    &-container{
+        padding: {
+            left: 25px;
+            right: 25px;
+            bottom: 40px;
+        }
+        @include for-desktop{
+            padding-bottom: 80px;
+        }
+    }
+    &__title{
+        font-weight: 400;
+        font-size: 24px;
+        text-align: center;
+        color: var(--SubTitleColor);
+        padding-top: 40px;
+        @include for-mobile{
+            font-size: 48px;
+        }
+        @include for-tablet{
+            font-size: 36px;
+        }
+        @include for-desktop{
+            font-size: 48px;
+            padding-top: 65px;
+        }
+        @include for-desktop-HD{
+            margin-top: 52px;
+        }
+    }
+    &__wand{
+        width: 50px;
+        height: 8px;
+        margin: {
+            top: 20px;
+            left: auto;
+            right: auto;
+        }
+        background-color: var(--MainColor);
+        @include for-mobile{
+            width: 100px;
+        }
+        @include for-tablet{
+            margin-top: 30px;
+        }
+        @include for-desktop-HD{
+            margin-top: 20px;
+        }
+    }
+    &__content{
+        margin-top: 40px;
+        display: grid;
+        gap: 21px;
+        @include for-mobile{
+            grid-template-columns: repeat(2, 270px);
+            gap: 30px;
+            max-width: 570px;
+            margin: {
+                top: 60px;
+                left: auto;
+                right: auto;
+            }
+        }
+        @include for-desktop{
+            margin-top: 95px;
+            max-width: 870px;
+            grid-template-columns: repeat(3, 270px);
+        }
+        @include for-desktop-HD{
+            margin-top: 115px;
+            max-width: 1170px;
+            grid-template-columns: repeat(4, 270px);
+        }
+    }
+    &__img{
+        max-width: 270px;
+        margin: 0px auto;
+        &-picture{
+            width: 100%;
+        }
+        &-title{
+            padding: {
+                top: 8px;
+                bottom: 10px;
+                left: 20px;
+            }
+            background-color: var(--white);
+            color: var(--SubTitleColor);
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 2px;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    }
+}

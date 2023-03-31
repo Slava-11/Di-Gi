@@ -1,0 +1,179 @@
+@import './var.scss';
+@import './mixins.scss';
+
+.team{
+    &-container{
+        padding: {
+            left: 20px;
+            right: 20px;
+            bottom: 40px;
+        }
+        @include for-mobile{
+            padding: {
+                left: 60px;
+                right: 60px;
+            }
+          }
+          @include for-tablet{
+            padding: {
+                left: 53px;
+                right: 53px;
+            }
+            display: flex;
+            gap: 35px;
+          }
+          @include for-desktop{
+            padding: {
+                left: 46px;
+                right: 46px;
+            }
+          }
+          @include for-desktop-HD{
+            padding: {
+                left: 150px;
+                right: 150px;
+            }
+            gap: 100px;
+          }
+    }
+    &__img{
+        margin: 0px auto;
+        width: 265px;
+        @include for-mobile{
+            width: 505px;
+        }
+        @include for-desktop{
+            width: 401px;
+            margin: 0px;
+        }
+        @include for-desktop-HD{
+            width: 460px;
+        }
+        &-photo{
+            width: 100%;
+            @include for-tablet{
+                width: 240px;
+                height: 366px;
+                object-fit: cover;
+            }
+            @include for-desktop{
+                width: 400px;
+                height: 100%;
+            }
+            @include for-desktop-HD{
+                width: 460px;
+            }
+        }
+    }
+    &__title{
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 35px;
+        @include for-mobile{
+            font-size: 36px;
+            margin-top: 40px;
+        }
+        @include for-tablet{
+            text-align: left;
+            margin-top: 0px;
+        }
+        @include for-desktop{
+            font-size: 48px;
+            margin-top: 20px;
+        }
+        @include for-desktop-HD{
+            margin-top: 0px;
+        }
+    }
+    &__wand{
+        width: 45px;
+        height: 8px;
+        background-color: var(--MainColor);
+        margin: {
+            top: 20px;
+            left: auto;
+            right: auto;
+        }
+        @include for-mobile{
+            width: 90px;
+        }
+        @include for-tablet{
+            margin-left: 0px;
+        }
+        @include for-desktop{
+            margin-top: 15px;
+        }
+        @include for-desktop-HD{
+            margin-top: 30px;
+        }
+    }
+    &__subtitle{
+        text-align: center;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 400;
+        color: var(--TextColor);
+        margin-top: 25px;
+        @include for-mobile{
+            margin-top: 40px;
+        }
+        @include for-tablet{
+            text-align: left;
+            font-size: 18px;
+        }
+        @include for-desktop{
+            margin-top: 20px;
+            line-height: 24px;
+            max-width: 480px;
+        }
+        @include for-desktop-HD{
+            margin-top: 40px;
+            max-width: 585px;
+        }
+    }
+    &__button{
+        text-decoration: none;
+        display: block;
+        padding: {
+            top: 21px;
+            bottom: 21px;
+            left: 26px;
+            right: 26px;
+        }
+        font-size: 20px;
+        color: var(--khaki);
+        background-color: var(--MainColor);
+        margin: {
+            top: 90px;
+            left: auto;
+            right: auto;
+        }
+        max-width: 230px;
+        border-radius: 3px;
+        font-weight: 500;
+        &:hover{
+            background-color: var(--MainAnimationColor);
+            transition: .4s;
+        }
+        &:active{
+            color: var(--gray);
+            transition: .1s;
+        }
+        @include for-mobile{
+            margin-top: 60px;
+        }
+        @include for-tablet{
+            margin: {
+                left: 0px;
+                top: 20px;
+            }
+        }
+        @include for-desktop{
+            margin-top: 30px;
+        }
+        @include for-desktop-HD{
+            margin-top: 90px;
+        }
+    }
+}

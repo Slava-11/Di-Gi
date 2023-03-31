@@ -1,0 +1,248 @@
+@import './var.scss';
+@import './mixins.scss';
+
+.footer{
+    &__logo-img{
+        display: block;
+        margin: {
+            left: auto;
+            right: auto;
+            bottom: -30px;
+        }
+        border-radius: 3px;
+        padding: {
+            left: 73px;
+            right: 73px;
+            top: 5px;
+            bottom: 5px;
+        }
+        background-color: var(--MainColor);
+    }
+    &__content{
+        background-color: var(--MainColor);
+        padding-bottom: 65px;
+        @include for-tablet{
+            padding-bottom: 35px;
+        }
+        @include for-desktop{
+            padding-bottom: 95px;
+        }
+        @include for-desktop-HD{
+            padding-bottom: 80px;
+        }
+    }
+    &__title{
+        padding-top: 100px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: 2px;
+        text-align: center;
+        color: var(--white);
+        max-width: 275px;
+        margin: 0px auto;
+        @include for-mobile{
+            padding-top: 85px;
+            text-align: left;
+            max-width: 547px;
+            font-size: 24px;
+            line-height: 26px;
+        }
+        @include for-tablet{
+            padding-top: 115px;
+            max-width: 690px;
+            font-size: 36px;
+            line-height: 32px;
+        }
+        @include for-desktop{
+            padding: {
+                top: 160px;
+                left: 46px;
+            }
+            max-width: 750px;
+            margin: 0px;
+        }
+        @include for-desktop-HD{
+            max-width: 698px;
+            font-size: 24px;
+            padding-left: 150px;
+        }
+    }
+    &__social{
+        width: 25px;
+        margin: {
+            top: 45px;
+            left: auto;
+            right: auto;
+            bottom: 45px;
+        }
+        @include for-mobile{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: {
+                top: 40px;
+                bottom: 40px;
+            }
+        }
+        @include for-tablet{
+            margin-bottom: 70px;
+        }
+        @include for-desktop{
+            margin: {
+                top: 80px;
+                bottom: 60px;
+            }
+        }
+        @include for-desktop-HD{
+            margin-bottom: 80px;
+        }
+        &-network{
+            @include for-mobile{
+                padding: {
+                    top: 20px;
+                    bottom: 20px;
+                    left: 60px;
+                    right: 60px;
+                }
+                border-left: 1px solid var(--BorderColor);
+                border-top: 1px solid var(--BorderColor);
+                border-bottom: 1px solid var(--BorderColor);
+            }
+            @include for-tablet{
+                padding: {
+                    left: 77px;
+                    right: 77px;
+                }
+            }
+            @include for-desktop{
+                padding: {
+                    left: 104px;
+                    right: 104px;
+                }
+            }
+            @include for-desktop-HD{
+                padding: {
+                    left: 130px;
+                    right: 130px;
+                }
+            }
+            &-individuals{
+                @include for-mobile{
+                    border-left: none;
+                }
+            }
+            &-img{
+                display: block;
+                margin-bottom: 15px;
+                @include for-mobile{
+                    margin-bottom: 0px;
+                }
+        }
+        }
+    }
+    &__additional-list{
+        @include for-mobile{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 460px;
+            padding-left: 46px;
+        }
+        @include for-tablet{
+            max-width: 500px;
+        }
+        @include for-desktop{
+            max-width: 820px;
+        }
+        @include for-desktop-HD{
+            max-width: 950px;
+            padding-left: 150px;
+        }
+    }
+    &__list{
+        margin-bottom: 40px;
+        @include for-mobile{
+            max-width: 180px;
+            margin-right: 50px;
+        }
+        @include for-desktop{
+            margin: 0px;
+        }
+    }
+    &__additional-title{
+        margin-bottom: 13px;
+        color: var(--khaki);
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    &__additional-information{
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--white);
+        text-align: center;
+        &:active{
+            color: var(--gray);
+            transition: .2s;
+        }
+    }
+    &__anchor{
+        background-color: var(--khaki);
+    }
+    &__anchor-link{
+        padding: {
+            top: 55px;
+            bottom: 20px;
+        }
+        width: 50px;
+        margin: 0px auto;
+        text-align: center;
+        line-height: 40px;
+        @include for-mobile{
+            width: 100%;
+            text-align: right;
+            padding: {
+                top: 15px;
+                right: 15px;
+                bottom: 15px;
+            }
+            line-height: 0px;
+        }
+        @include for-desktop-HD{
+            padding-right: 150px;
+        }
+    }
+    &__anchor-title{
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: var(--SubTitleColor);
+        &:active{
+            color: var(--gray);
+        }
+     }
+}
+i {
+    border: solid var(--MainColor);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 8px;
+    @include for-mobile{
+        padding: 5px;
+        margin-left: 20px;
+    }
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
